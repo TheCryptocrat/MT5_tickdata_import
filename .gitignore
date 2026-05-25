@@ -1,0 +1,33 @@
+# Generated runtime artifacts
+state.json
+manifest.json
+logs/
+*.log
+
+# Discovery artifacts (large; kept locally as reference but not source-controlled)
+*.png
+mt5_tree.txt
+mt5_tree.json
+ui_tree.txt
+ui_tree.json
+context_menu_tree.txt
+context_menu_tree.json
+probe_*.txt
+opsdlg_*.txt
+opsdlg_*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# MQL5 generated
+*.ex5
+
+# OneDrive crud
+desktop.ini
+~$*
+
+# Editor
+.vscode/
+.idea/

@@ -1,0 +1,25 @@
+﻿ops_win: AUDNZD operations
+clicking Start export...
+
+=== WinAPI EnumWindows ===
+  hwnd=8259232    pid=11824  cls='#32770'                     title='Save As'
+  hwnd=6359102    pid=11824  cls='HwndWrapper[Tick Data Manager.exe;;4b44fdbb-3561-4d50-add2-732398c696f5]' title='AUDNZD operations'
+  hwnd=5245142    pid=11824  cls='HwndWrapper[Tick Data Manager.exe;;1e045808-30d8-4d2a-8432-4c90237d125e]' title='Tick Data Manager'
+  hwnd=3345254    pid=9136   cls='Chrome_WidgetWin_1'         title='Claude'
+  hwnd=327804     pid=12888  cls='CabinetWClass'              title='TickData - File Explorer'
+  hwnd=525500     pid=11164  cls='Windows.UI.Core.CoreWindow' title='Settings'
+  hwnd=1444640    pid=21760  cls='ApplicationFrameWindow'     title='Settings'
+  hwnd=131504     pid=20232  cls='Windows.UI.Core.CoreWindow' title='Windows Input Experience'
+  hwnd=65808      pid=12888  cls='Progman'                    title='Program Manager'
+
+=== descendants of main_win with ct=Window ===
+  ct=Window title='AUDNZD operations'                      cls='Window'             rect=(1080, 531, 1480, 861)
+  ct=Window title='Save As'                                cls='#32770'             rect=(1088, 562, 2382, 1331)
+
+=== children of ops_win ===
+  ct=Window     title='Save As'                                cls='#32770'             rect=(1088, 562, 2382, 1331)
+  ct=TitleBar   title=''                                       cls=''                   rect=(1104, 534, 1472, 562)
+  ct=Tab        title=''                                       cls='TabControl'         rect=(1088, 562, 1472, 827)
+  ct=Button     title='Save configuration...'                  cls='Button'             rect=(1091, 830, 1208, 850)
+  ct=Button     title='Load configuration...'                  cls='Button'             rect=(1214, 830, 1331, 850)
+  ct=Button     title='Cancel'                                 cls='Button'             rect=(1424, 830, 1469, 850)

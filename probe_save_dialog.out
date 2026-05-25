@@ -1,0 +1,60 @@
+﻿ops_win: AUDNZD operations
+clicking Start export...
+
+--- t=1s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=2s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=3s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=4s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=5s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=6s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=7s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- t=8s ---
+  pid=11824  ct=Pane       cls='SysShadow'              title=''
+  pid=11824  ct=Window     cls='Window'                 title='Tick Data Manager'
+  pid=9136   ct=Window     cls='Chrome_WidgetWin_1'     title='Claude'
+  pid=12888  ct=Window     cls='CabinetWClass'          title='TickData - File Explorer'
+  pid=12888  ct=Pane       cls='Progman'                title='Program Manager'
+
+--- final scan for save/export dialog ---
