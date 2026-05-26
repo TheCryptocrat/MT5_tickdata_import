@@ -235,6 +235,26 @@ Expected runtime on the reference machine: 5-15 min for the typical weekly
 refresh (most symbols use the incremental + continuity-check path; only a
 few fresh imports take ~90s each).
 
+### ⚠ 3.4.1 CRITICAL: close MT5 via File → Exit after the import
+
+`CustomSymbolCreate()` registers the new symbol **in memory only**. MT5 only
+persists the symbol manifest (`<MT5 portable>\bases\symbols.custom.dat`) on a
+**clean shutdown via File → Exit**. If MT5 is killed via Task Manager, force-
+closed via the X button, or crashes before saving, the newly-created custom
+symbols disappear on the next launch — even though their tick data files on
+disk under `bases\Custom\ticks\<sym>\` remain. The strategy tester then
+reports `symbol <NAME>_TDS not exist` and backtests fail.
+
+After every run that creates a new `_TDS` symbol:
+
+1. **In MT5: File → Exit** (NOT the X button, NOT Alt-F4, NOT Task Manager).
+2. Wait ~10 seconds for the process to fully terminate.
+3. Re-launch MT5. The new symbols should now persist permanently.
+
+If you discover the symbols are missing after a restart, use
+`mapping_recovery.csv` (or generate a similar subset) and re-run the script
+just for the missing symbols, then File → Exit again.
+
 ### 3.5 What the importer does per symbol
 
 ```
@@ -305,6 +325,7 @@ This was scoped out for the reference deployment; see
 | `file mtime did not advance` | TDM skipped because existing CSV already covers requested range | delete the destination CSV to force re-export, or accept existing as still valid |
 | TDM_TickImporter writes empty log + skipped=N | mapping CSV parsing broken (TAB vs comma) | verify `FileOpen(..., FILE_CSV, ',')` in TDM_TickImporter.mq5 — comma delimiter is REQUIRED |
 | TDM_TickImporter logs `continuity: matched=0  mismatched>0` | MT5's existing ticks for that symbol don't match TDM's CSV — likely a revised history | re-run with `bypass incremental detection: true` to force-reimport that symbol |
+| Strategy Tester: `symbol <NAME>_TDS not exist` after a successful import | MT5 was killed/crashed without saving `symbols.custom.dat`; the in-memory symbol was lost on restart | re-run the importer using `mapping_recovery.csv` (only the missing symbols), then **MT5 → File → Exit** to persist. See § 3.4.1. |
 | MT5 scheduled task fires but does nothing | MT5 scripts can't run headless — task is wrong concept | either drag manually post-TDM-refresh, or convert to EA + Strategy Tester (see § 4) |
 | Many symbols in `needs_full_reimport.csv` after first run | first-time imports of existing `_TDS` symbols that have history that doesn't match TDM | this is expected; re-run those symbols with `forceFullReimport=true` |
 
